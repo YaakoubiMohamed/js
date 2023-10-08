@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="age">donner votre age</label>
+    <!-- <p>donner votre age</p> -->
+    <!-- donner votre age -->
+    <input type="text" id="age">
+    <button onclick="verif()">Soumettre</button>
+    <p id="result"></p>
+
+    <script>
+        function verif(){
+            let age = document.getElementById("age").value;
+            if(age < 18){
+                // alert("vous etes mineur");
+                document.getElementById("result").innerHTML = "vous etes mineur";
+            }
+            else{
+                // alert("vous etes majeur");
+                document.getElementById("result").innerHTML = "vous etes majeur";
+            }
+        }
+        </script>
+</body>
+</html>

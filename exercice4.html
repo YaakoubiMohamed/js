@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice DOM</title>
+	<style>
+		p {
+			background-color: white;
+		}
+	</style>
+	<script>
+		function changeStyle() {
+			var paraElements = document.getElementsByClassName("para");
+			for (var i = 0; i < paraElements.length; i++) {
+				paraElements[i].style.backgroundColor = "red";
+				paraElements[i].style.color = "white";
+			}
+			var titleElements = document.getElementsByClassName("title");
+			for (var i = 0; i < titleElements.length; i++) {
+				titleElements[i].style.color = "blue";
+				titleElements[i].style.fontSize = "30px";
+			}
+		}
+	</script>
+</head>
+<body>
+	<p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	<p class="para">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	<p class="para">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	<h1 class="title">Titre 1</h1>
+	<h2 class="title">Titre 2</h2>
+	<input type="button" value="Changer le style" onclick="changeStyle()">
+</body>
+</html>

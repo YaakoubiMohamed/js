@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Count H2 Tags</title>
+  </head>
+  <body>
+    <h1 id="" name="" class="">Count H2 Tags</h1>
+
+    <h2>First heading</h2>
+    <p>Paragraph 1</p>
+
+    <h2>Second heading</h2>
+    <p>Paragraph 2</p>
+
+    <h2>Third heading</h2>
+    <p>Paragraph 3</p>
+
+    <script>
+      let headings = document.getElementsByTagName("h2");
+      // alert(`Number of H2 tags: ${headings.length}`);
+      headings = Array.from(headings);
+
+      headings.forEach((heading) => {
+        heading.style.color = "blue";
+        heading.style.fontSize = "20px";
+      });
+    </script>
+  </body>
+</html>

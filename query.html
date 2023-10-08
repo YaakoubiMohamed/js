@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <h1>Hello2</h1>
+    <ul>
+      <li id="test" class="menu-item">Home</li>
+      <li id="test" class="menu-item">About</li>
+      <li id="test" class="menu-item">Contact</li>
+    </ul>
+    <script>
+      let element = document.querySelector("*"); // select 1st element in the document
+      console.log(element);
+
+      let element2 = document.querySelectorAll("*"); // select all elements in the document
+      console.log(element2);
+
+      let li = document.querySelector("h1"); // select 1st element
+      console.log(li);
+
+      let li1 = document.querySelectorAll("h1"); // select 1st element
+      console.log(li1);
+
+      let menu = document.querySelector(".menu-item"); // select 1st element with class = .menu-item
+      console.log(menu);
+      let menuitem = document.querySelectorAll(".menu-item"); // select all elements with class .menu-item
+      console.log(menuitem);
+
+      let menuid = document.querySelector("#test"); // select 1st element with id test
+      console.log(menuid);
+
+      let menuitemid = document.querySelectorAll("#test"); // select 1st element with id test
+      console.log(menuitemid);
+    </script>
+  </body>
+</html>

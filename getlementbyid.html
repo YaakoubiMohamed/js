@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript getElementById() Method</title>
+    <style>
+      h2.chapitre2 {
+        color: blue;
+      }
+      h2 {
+        color: red;
+      }
+      .title {
+        color: blue;
+      }
+      #msg {
+        color: green;
+      }
+      label {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="msg">A simple paragraph</p>
+    <h1 class="title">chapitre1</h1>
+
+    <input type="radio" name="gender" id="" value="homme" /> homme
+    <input type="radio" name="gender" id="" value="femme" /> femme
+
+    <input type="text" name="prenom" />
+
+    <p id="test"></p>
+
+    <h2 class="chapitre1">chapitre 1</h2>
+    <h2 class="chapitre2">
+        <label for="">chapitre 2</label>
+    </h2>
+
+    <script>
+      let h2 = document.getElementsByTagName("h2");
+      document.getElementById("test").innerHTML = "Bonjour";
+      let p = document.getElementById("msg");
+      let title = document.getElementsByClassName("title");
+      let gender = document.getElementsByName("prenom");
+      console.log(p);
+      console.log(title);
+      console.log(gender);
+    </script>
+  </body>
+</html>
