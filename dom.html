@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Exercice JavaScript - Gestion du CSS via le DOM</title>
-  <style>
-    body {
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercice JavaScript - Gestion du CSS via le DOM</title>
+    <style>
+      body {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -22,77 +22,87 @@
         font-size: 16px;
         padding: 5px;
       }
-    input[type="text"], input[type="color"], button {
-  margin: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  /* border: none; */
-  font-size: 16px;
-}
+      input[type="text"],
+      input[type="color"],
+      button {
+        margin: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        /* border: none; */
+        font-size: 16px;
+      }
 
-input[type="text"], input[type="color"] {
-  width: 150px;
-}
+      input[type="text"],
+      input[type="color"] {
+        width: 150px;
+      }
 
-button {
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-}
+      button {
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
 
-button:hover {
-  background-color: #3e8e41;
-}
+      button:hover {
+        background-color: #3e8e41;
+      }
 
-#text {
-  font-size: 20px;
-  font-weight: bold;
-}
+      #text {
+        font-size: 20px;
+        font-weight: bold;
+      }
 
-#colorPicker {
-  margin-left: 10px;
-  height: 40px;
-}
+      #colorPicker {
+        margin-left: 10px;
+        height: 40px;
+      }
 
-/* #colorPicker {
+      /* #colorPicker {
   display: none;
 } */
 
-#styl {
-  width: 150px;
-}
-  </style>
-</head>
-<body>
-  <div class="container">
-  <p id="text">JavaScript Exercises - Gestion du CSS via le DOM</p>
-    <input type="color" id="colorPicker" onchange="changeBackgoundColor()"><button onclick="changeColor()">Changer la couleur</button> <br>
-    <input type="text" id="taille" placeholder="Taille"><button onclick="changeFontSize()">Changer la taille de police</button> <br>
-    <input type="text" name="" id="styl" placeholder="Style"><button onclick="changeFontStyle()">Changer le style de police</button> 
-</div>
-  <script>
-    
-    function changeColor(){
+      #styl {
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p id="text">JavaScript Exercises - Gestion du CSS via le DOM</p>
+      <input type="color" id="colorPicker" /><button onclick="changeColor()">
+        Changer la couleur
+      </button>
+      <br />
+      <input type="text" id="taille" placeholder="Taille" /><button
+        onclick="changeFontSize()"
+      >
+        Changer la taille de police
+      </button>
+      <br />
+      <input type="text" name="" id="styl" placeholder="Style" /><button
+        onclick="changeFontStyle()"
+      >
+        Changer le style de police
+      </button>
+    </div>
+    <script>
+      function changeColor() {
         var colorPicker = document.getElementById("colorPicker").value;
         console.log(colorPicker);
         document.getElementById("text").style.color = colorPicker;
-    }
+      }
 
-    function changeFontSize(){
+      function changeFontSize() {
         var taille = document.getElementById("taille").value;
         console.log(taille);
         document.getElementById("text").style.fontSize = taille;
-    }
+      }
 
-    function changeFontStyle(){
+      function changeFontStyle() {
         var Style = document.getElementById("styl").value;
         console.log(Style);
         document.getElementById("text").style.fontStyle = Style;
-    }
-    function changeBackgoundColor(){
-        var colorPicker = document.getElementById("Background");
-                console.log(colorPicker.value);
-    }
-  </script>
-</body>
+      }
+    </script>
+  </body>
 </html>

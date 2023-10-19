@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         b=6;
+        a = b -5;       
+        console.log(a);
+    </script>
+    
+</head>
+<body>
+    <h1 class="title">Chapitre 1 : Introduction</h1>
+    <h1 id="chapitre"> Chapitre 2 : HTML & CSS</h1>
+    <h1 class="title">Chapitre 3 : JS</h1>
+    <script>
+        let titles = document.getElementsByTagName("h1");   
+        let classes = document.getElementsByClassName("title");
+        let chapitre = document.getElementById("chapitre");
+        console.log(classes);
+        console.log(chapitre);
+        // titles = Array.from(titles);  
+        // console.log(titles);  
+        // titles.forEach((title) => {
+        //     title.style.color = "red";
+        // }) 
+        console.log(titles); 
+        for (let i = 0; i < titles.length; i++) {
+            console.log(titles[i]);
+            titles[i].style.color = "green";
+        }
+        chapitre.style.color = "blue";
+    </script>
+</body>
+</html>

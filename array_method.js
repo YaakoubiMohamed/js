@@ -19,3 +19,17 @@ let tab = [ 24, 6 ,9, 25, 7,80];
 
 console.log("splice",tab.splice(0,3)); // retourner les elements supprimes splice [ 24, 6, 9 ]
 console.log("splice",tab); // splice [ 25, 7, 80 ]
+
+let tabs = [1,2,3,4,5];
+tabs.forEach(element => {
+    console.log('element',element)
+})
+
+for(let i=0; i<tabs.length; i++){
+    console.log('i',tabs[i])
+}
+let i=0;
+while(i < tabs.length){
+    console.log('i',tabs[i]);
+    i++;
+}

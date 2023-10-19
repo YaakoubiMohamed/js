@@ -1,0 +1,10 @@
+// concat
+// slice
+// substring
+// substr
+// replace
+// toUpperCase
+// toLowerCase
+// trim
+// charAt
+// split

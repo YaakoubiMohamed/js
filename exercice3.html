@@ -16,14 +16,15 @@
     <p>Paragraph 3</p>
 
     <script>
-      let headings = document.getElementsByTagName("h2");
-      // alert(`Number of H2 tags: ${headings.length}`);
-      headings = Array.from(headings);
+      let headings = document.getElementsByTagName("h2"); // HTMLCollection
+      console.log(headings);
+      headings = Array.from(headings);// coverstion HTMLCollection to Array|tableau
 
       headings.forEach((heading) => {
         heading.style.color = "blue";
         heading.style.fontSize = "20px";
       });
+      
     </script>
   </body>
 </html>
