@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Bienvenue <p id="nom_prenom"> </p> </h1>
+    <script>
+        let nom = window.localStorage.getItem('nom');
+        let prenom = window.localStorage.getItem('prenom');
+        console.log(nom, prenom);
+        document.getElementById("nom_prenom").innerHTML = nom+" "+prenom; 
+    </script>
+</body>
+</html>

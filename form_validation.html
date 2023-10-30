@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="validation.css">
+</head>
+<body>
+    <form>
+        <div>
+          <label for="nom">Nom:</label>
+          <input type="text" id="nom" name="nom" >
+          <span class="error"></span>
+        </div>
+        <div>
+          <label for="prenom">Prénom:</label>
+          <input type="text" id="prenom" name="prenom" >
+          <span class="error"></span>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" >
+          <span class="error"></span>
+        </div>
+        <div>
+          <label for="password">Mot de passe:</label>
+          <input type="password" id="password" name="password" >
+          <span class="error"></span>
+        </div>
+        <div>
+          <label for="date_nais">Date de naissance:</label>
+          <input type="date" id="date_nais" name="date_nais" >
+          <span class="error"></span>
+        </div>
+        <div>
+          <label for="adresse">Adresse:</label>
+          <input type="text" id="adresse" name="adresse" >
+          <span class="error"></span>
+        </div>
+        <button type="submit">Envoyer</button>
+      </form>
+      <script src="validation.js"></script>
+</body>
+</html>

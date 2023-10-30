@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function goToHello(){
+            let nom = document.getElementById("nom").value;
+            let prenom = document.getElementById("prenom").value;
+            console.log(nom, prenom);
+            window.localStorage.setItem("nom", nom);
+            window.localStorage.setItem("prenom", prenom);
+            window.location.href="hello.html";
+        }
+    </script>
+</head>
+<body>
+    <!-- <form action="hello.html"> -->
+        <div>
+          <label for="nom">Nom:</label>
+          <input type="text" id="nom" name="nom" >
+          <span class="error"></span>
+        </div>
+        <div>
+          <label for="prenom">Prénom:</label>
+          <input type="text" id="prenom" name="prenom" >
+          <span class="error"></span>
+        </div>
+        <div>
+            <button id="btn" onclick="goToHello();">Envoyer</button>
+        </div>
+    <!-- </form> -->
+</body>
+</html>

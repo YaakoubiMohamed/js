@@ -50,7 +50,8 @@ const voitures = [
 // voitures.forEach(voiture => console.log(voiture.obtenirDescription()));
 
 /* EX4 */
-
+// var url= 'https://formation-admin.vercel.app/users?id='+id+'&nom='+nom;
+// var url =`https://formation-admin.vercel.app/users?id=${id}&nom=${nom}`
 class Vehicle{
     constructor(make,model){
         this.make = make;
@@ -58,7 +59,7 @@ class Vehicle{
     }
     drive(){
         console.log(`driving the ${this.make} ${this.model}`)
-    }
+    }    
 
 }
 
