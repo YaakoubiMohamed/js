@@ -1,8 +1,14 @@
-Créer une page HTML avec un formulaire contenant les champs suivants : nom, prénom, date de naissance, téléphone, email et mot de passe.
-Au clic sur le bouton "Envoyer" :
-Vérifier si tous les champs sont remplis.
-Si l'âge est inférieur à 18 ans, le formulaire ne sera pas valide.
-Si tout est correct, naviguer vers la page "profile.html".
-Créer la page "profile.html" :
-Afficher les coordonnées du client.
-Ajouter un bouton pour changer l'arrière-plan de la page "profile.html".
+créez une page HTML appelée index.html avec un formulaire contenant les champs suivants :
+nom, prénom, date de naissance, téléphone, email et mot de passe
+
+on clique sur le bouton envoyer :
+1- vérifier si les champs sont remplis
+2- si âge < 18 ans le formulaire ne sera pas valable
+3- si tout est correct accédez à la page home.html
+créer une page home.html :
+1- afficher bonjour prénom nom
+2- ajouter un bouton de déconnexion, cela reviendra à la première page index.html
+3- ajouter une mise à jour du lien : ce lien redirigera vers la page profile.html
+4- Ajouter un bouton pour modifier l'arrière-plan de la page profile.html
+créer une page profile.html :
+1-créer un formulaire rempli avec les informations de l'utilisateur actuel. après avoir mis à jour les informations de l'utilisateur, retournez à la page home.html
