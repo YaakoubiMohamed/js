@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <label for="nom">Nom</label>
+	<input type="text" id="nom" name="nom" class="input">
+
+	<label for="Prenom">Prenom</label>
+	<input type="text" id="prenom" name="prenom" class="input">
+
+	<label for="date">date de naissance</label>
+	<input type="date" id="date" name="date" class="input">
+
+	<label for="email">email</label>
+	<input type="text" id="email" name="email" class="input">
+
+	<label for="psw">mot de passe</label>
+	<input type="text" id="psw" name="psw" class="input">
+
+	<input type="button" value="envoyer" onclick="formulairevalide()" class="btn">
+    <script>
+        var profile=JSON.parse( window.localStorage.getItem("profl"));
+        console.log(profile);
+        document.getElementById('nom').value = profile.nom
+        document.getElementById('prenom').value = profile.prenom
+        document.getElementById('date').value = profile.date
+        document.getElementById('email').value = profile.email
+        document.getElementById('psw').value = profile.psw
+    </script>
+</body>
+</html>

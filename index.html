@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<!--   <form> -->
+	<label for="nom">Nom</label>
+	<input type="text" id="nom" name="nom" class="input">
+
+	<label for="Prenom">Prenom</label>
+	<input type="text" id="prenom" name="prenom" class="input">
+
+	<label for="date">date de naissance</label>
+	<input type="date" id="date" name="date" class="input">
+
+	<label for="email">email</label>
+	<input type="text" id="email" name="email" class="input">
+
+	<label for="psw">mot de passe</label>
+	<input type="text" id="psw" name="psw" class="input">
+
+	<input type="button" value="envoyer" onclick="formulairevalide()" class="btn">
+	<div class="result" id="result"></div>
+	<!-- </form> -->
+</body>
+<script>
+	function formulairevalide() {
+
+		var nom = document.getElementById("nom").value;
+		var prenom = document.getElementById("prenom").value;
+		var date = new Date(document.getElementById("date").value);
+		var email = document.getElementById("email").value;
+		var psw = document.getElementById("psw").value;
+		var result = document.getElementById("result");
+
+		if (nom === "" || prenom === "" || date === "" || email === "" || psw === "") {
+			result.innerHTML = "Veuillez remplir tous les champs.";
+			return;
+		}
+		var diff = Date.now() - date.getTime();
+		var age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+		console.log(age);
+		if (age < 0) {
+			result.innerHTML = "formulaire non valide, age <18.";
+			return;
+		}
+
+		else {
+			let profiel = {
+				nom: nom,
+				prenom: prenom,
+				date: date,
+				email: email,
+				psw: psw,
+			}
+			window.localStorage.setItem("profl",JSON.stringify(profiel));//convertir l'obejt à string
+			/*   getProfile(){
+				 return (` Profile : ${this.nom} ${this.prenom} ${this.date}${this.email}${this.psw}`)
+				 //console.log(nom,prenom,date,email,psw);
+		  }}
+		  console.log(profiel.getProfile());//AFFichage pour moi
+		  document.getElementById("getProfile").innerHTML=profiel.getProfile(); */
+
+			window.location.href = "home.html";
+
+		}
+
+	}
+</script>
+
+</html>

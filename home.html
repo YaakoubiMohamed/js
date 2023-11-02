@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome<p id="getProfile"> </p></h1>
+    <input type="color" id="colorPicker" name="colorPicker" />
+    <input type="button" value="Change Color page " onclick="ChangeColorpage ()" class="btn">
+<a href="profile.html">modifier</a>
+<!-- </form> -->
+    <script>
+var profile=JSON.parse( window.localStorage.getItem("profl"));//covertir string to object
+console.log(profile);
+document.getElementById("getProfile").innerHTML=profile.nom +" " +profile.prenom ;
+function ChangeColorpage() {	
+    var colorPicker = document.getElementById("colorPicker");
+        document.body.style.backgroundColor = colorPicker.value;   
+        }
+    </script>
+</body>
+</html>
