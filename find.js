@@ -1,6 +1,6 @@
 let arr = [24, 80 ,9, 25, 7,80];
 
-console.log(arr.indexOf(80)); // return 1 indes of 6
+console.log(arr.indexOf(80)); // return 1 index of 80
 console.log(arr.indexOf(4)); // return -1 index of 4
 console.log(arr.lastIndexOf(80)); // return 5 index of 80
 

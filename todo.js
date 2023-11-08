@@ -1,3 +1,4 @@
+
 // Récupérer les éléments de l'interface utilisateur
 const taskInput = document.getElementById('taskInput');
 const addButton = document.getElementById('addButton');
@@ -16,16 +17,16 @@ addButton.addEventListener('click', function() {
 // Supprimer ou mettre à jour une tâche
 taskList.addEventListener('click', function(event) {
   if (event.target.classList.contains('deleteButton')) {
-    const taskItem = event.target.parentNode;
-    const taskIndex = Array.from(taskList.children).indexOf(taskItem);
+    const taskItem = event.target.parentNode;// event.target.parentNode return tag/balise li
+    const taskIndex = Array.from(taskList.children).indexOf(taskItem);// taskIndex = position de li dans ul
     removeTask(taskIndex);
     saveTasks();
   } else if (event.target.classList.contains('updateButton')) {
     const taskItem = event.target.parentNode;
     const taskIndex = Array.from(taskList.children).indexOf(taskItem);
-    const updatedTask = prompt('Modifier la tâche :', taskItem.firstChild.textContent);
+    const updatedTask = prompt('Modifier la tâche :', taskItem.firstChild.textContent); // nouveau titre
     if (updatedTask) {
-      updateTask(taskIndex, updatedTask);
+      updateTask(taskIndex, updatedTask);// updateTadk(position tache, nouveau titre)
       saveTasks();
     }
   }
@@ -50,7 +51,8 @@ function addTask(task) {
 
 // Supprimer une tâche de la liste
 function removeTask(index) {
-  taskList.removeChild(taskList.children[index]);
+  console.log("Removing task index",index);
+  taskList.removeChild(taskList.children[index]);// supprimer li (tache) dans la position index 
 }
 
 // Mettre à jour une tâche dans la liste
@@ -63,6 +65,8 @@ function saveTasks() {
   const tasks = Array.from(taskList.children).map(function(taskItem) {
     return taskItem.firstChild.textContent;
   });
+  // tasks contains list of tasks(taches/<li>)
+  // localStorage.setItem('tasks', tasks);// erreur
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
