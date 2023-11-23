@@ -1,0 +1,122 @@
+<!doctype html>
+<title>CSS Grid Template 1</title>
+<link rel="stylesheet" href="test.css">
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Bienvenue sur notre site</h1>
+      <p>Trouvez les meilleures offres sur nos produits</p>
+    </header>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Produits</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Contactez-nous</a></li>
+      </ul>
+    </nav>
+    <nav class="mobile-nav">
+      <div class="menu-toggle">
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+      </div>
+      <ul class="mobile-menu">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Produits</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Contactez-nous</a></li>
+      </ul>
+    </nav>
+    <section id="slider">
+      <div class="slide active">
+        <img src="slider1.jpg" alt="Slider Image 1">
+        <h3>Découvrez notre nouvelle collection</h3>
+      </div>
+      <div class="slide">
+        <img src="slider2.jpg" alt="Slider Image 2">
+        <h3>Offres exclusives pour vous</h3>
+      </div>
+      <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+      <span class="next" onclick="plusSlides(1)">&#10095;</span>
+    </section>
+    <section id="cards">
+      <div class="card">
+        <img src="product1.png" alt="Product 1">
+        <h2>REALME C53 </h2>
+        <p>SMARTPHONE REALME C53 / 6 GO / 128 GO</p>
+      </div>
+      <div class="card">
+        <img src="product2.png" alt="Product 2">
+        <h2>CAMÉSCOPE CANON </h2>
+        <p>CAMÉSCOPE CANON XA60 PROFESSIONNEL</p>
+      </div>
+      <div class="card">
+        <img src="product3.png" alt="Product 3">
+        <h2>MSI THIN GF63 12UCX3</h2>
+        <p>PC PORTABLE MSI THIN GF63 12UCX</p>
+      </div>
+      <div class="card">
+        <img src="product4.png" alt="Product 4">
+        <h2>MACHINE À LAVER </h2>
+        <p>MACHINE À LAVER SEMI AUTOMATIQUE</p>
+      </div>
+      <div class="card">
+        <img src="product5.png" alt="Product 5">
+        <h2>CAMÉRA EXTERNE MIPVISION</h2>
+        <p>CAMÉRA EXTERNE MIPVISION F024 / 2MP</p>
+      </div>
+      <div class="card">
+        <img src="product6.png" alt="Product 6">
+        <h2>Product 6</h2>
+        <p>Description of Product 6</p>
+      </div>
+    </section>
+    <section id="testimonials">
+      <div class="testimonial">
+        <img src="13.jpg" alt="Customer 1">
+        <h3>John Doe</h3>
+        <p>"Excellents produits et excellent service !"</p>
+      </div>
+      <div class="testimonial">
+        <img src="12.jpg" alt="Customer 2">
+        <h3>Jane Smith</h3>
+        <p>"J'adore la qualité des produits"</p>
+      </div>
+    </section>
+    <footer>
+      <h4>Contactez-nous</h4>
+      <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </footer>
+    <script>
+      document.querySelector('.menu-toggle').addEventListener('click', function () {
+        document.querySelector('.mobile-menu').classList.toggle('show');
+      });
+
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slide");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].classList.remove('active');
+        }
+        slides[slideIndex - 1].classList.add('active');
+      }
+    </script>
+  </div>
+</body>
