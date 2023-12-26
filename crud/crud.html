@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion de produits</title>
+    <link rel="stylesheet" href="crud.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Gestion des produits</h1>
+      <form id="product-form">
+        <input type="text" name="" id="name" />
+        <input type="number" name="" id="price" />
+        <button type="submit" class="add-btn">Ajouter</button>
+        <span id="error"></span>
+      </form>
+      <div id="product-list"></div>
+    </div>
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Product</h2>
+        <input type="hidden" id="oldName" />
+        <input type="text" id="editName" placeholder="New Name" />
+        <input type="number" id="editPrice" placeholder="New Price" />
+        <button id="saveEdit">Modifier</button>
+      </div>
+    </div>
+    <div id="deleteModal" class="modal">
+      <div class="modal-content">
+        <h2>Confirmation de suppression</h2>
+        <p>Etes-vous sur de vouloir supprimer ce produit ?</p>
+        <div class="modal-buttons">
+          <input type="hidden" id="deleteName" />
+          <button id="cancelDelete">Annuler</button>
+          <button id="confirmDelete">Confirmer</button>
+        </div>
+      </div>
+    </div>
+    <script src="crud.js"></script>
+  </body>
+</html>
